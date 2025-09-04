@@ -1,0 +1,31 @@
+@url = http://localhost:3000
+
+### calcular 
+POST {{url}}/resultado
+Content-Type: application/json
+
+{
+    "alto": 35,
+    "ancho": 40
+}
+
+### calcular numeros negativos
+POST {{url}}/resultado
+Content-Type: application/json
+
+{
+    "alto": 35,
+    "ancho": -40
+}
+
+### calcular cuadrado
+POST {{url}}/resultado
+Content-Type: application/json
+
+{
+    "alto": 20,
+    "ancho": 20
+}
+
+### mostrar resultado
+GET {{url}}/calculo
