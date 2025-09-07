@@ -1,0 +1,58 @@
+@url = http://localhost:3000
+
+### Todos los alumnos
+GET {{url}}/alumnos
+
+### Crear alumno
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+    "nombre": "Juan",
+    "notas": [10,8,6]
+}
+
+### Otro alumno
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+    "nombre": "Ana",
+    "notas": [6,7,9]
+}
+
+### Nombre duplicado
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+    "nombre": "Juan",
+    "notas": [5,5,5]
+}
+
+### Consultar un alumno en especifico
+GET {{url}}/alumnos/Juan
+
+### Modifico solo las notas 
+PUT {{url}}/alumnos/Juan
+Content-Type: application/json
+
+{
+  "notas": [8,8,8]
+}
+
+### Modifico solo el nombre 
+PUT {{url}}/alumnos/Juan
+Content-Type: application/json
+
+{
+  "nuevoNombre": "Pepe"
+}
+
+### Modificar nombre ya habiendo otro igual
+PUT {{url}}/alumnos/Ana
+Content-Type: application/json
+
+{
+  "nuevoNombre": "Pepe"
+}
