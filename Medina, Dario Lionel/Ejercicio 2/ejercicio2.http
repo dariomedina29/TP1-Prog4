@@ -38,7 +38,7 @@ PUT {{url}}/alumnos/Juan
 Content-Type: application/json
 
 {
-  "notas": [8,8,8]
+  "notas": [8,8,9]
 }
 
 ### Modifico solo el nombre 
