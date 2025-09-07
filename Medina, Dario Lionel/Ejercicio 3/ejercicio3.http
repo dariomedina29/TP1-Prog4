@@ -1,0 +1,38 @@
+@url = http://localhost:3000
+
+###Todas las tareas
+GET {{url}}/tareas
+
+###Tareas listas
+GET {{url}}/tareas?estado=listas
+
+###Tareas no completadas
+GET {{url}}/tareas?estado=porCompletar
+
+###Crear tarea
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Limpiar la pieza",
+    "lista": true
+}
+
+###Otra tarea
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Cocinar la cena",
+    "lista": false
+}
+
+###Crear una tarea duplicada
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Cocinar la cena",
+    "lista": false
+}
+
